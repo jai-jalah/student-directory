@@ -37,3 +37,11 @@ students = input_students
 print_header
 print(students)
 print_footer(students)
+
+# def print(students)
+#   counter = 0
+#   while counter < students.length
+#     puts "#{students[counter][:name]} (#{students[counter][:cohort]} cohort)"
+#     counter += 1
+#   end
+# end
