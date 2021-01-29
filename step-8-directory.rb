@@ -33,9 +33,11 @@ def input_students
 
         puts "Please enter the month of cohort"
         cohort = gets.delete!("\n")
+
         if cohort.empty?
           cohort = "january"
         end
+
         puts "Please enter date of birth :dd/mm/yyyy"
         dob = gets.delete!("\n")
         puts "Favourite hobby"
@@ -46,8 +48,9 @@ def input_students
         puts "Now we have #{students.count} students"
         name = gets.delete!("\n")
   end
+
   end
-    students
+  students
 end
 
 def print_header
@@ -65,15 +68,19 @@ end
   #end
 #end
 
-def print(students)
+def print(students) #Exercise 8
 counter = 0
+  puts "Which cohort would you like to print? "
+  answer = gets.delete("\n")
   while counter < students.length do
     index = counter + 1
-    if students[counter][:name].length <= 12 && students[counter][:name].chars.first == "a"
+    if students[counter][:name].length <= 12 && students[counter][:name].chars.first == "a" && answer == students[counter][:cohort]
       puts "#{index} #{students[counter][:name]} #{students[counter][:cohort]} cohort
       Date of Birth: #{students[counter][:dob]}
       Favourite Hobby: #{students[counter][:hobby]}
       Height(cm): #{students[counter][:height]}"
+    else
+      "No students in that cohort, yet... "
     end
     counter = counter + 1
   end
@@ -81,7 +88,7 @@ end
 
 def print_footer(students)
   if students.count > 1
-    puts "Overall, we have " "#{students.count} + great student".center(65)
+    puts "Overall, we have " "#{students.count} + great students".center(65)
   else
     puts "Overall, we have " "#{students.count} + great student".center(65)
   end
