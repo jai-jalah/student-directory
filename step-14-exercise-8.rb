@@ -1,3 +1,5 @@
+puts File.read(__FILE__)
+
 @students = [] # an empty array accessible to all methods
 def print_menu
   puts "1. Input the students"
