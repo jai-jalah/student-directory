@@ -88,9 +88,9 @@ end
 
 def print_footer(students)
   if students.count > 1
-    puts "Overall, we have " "#{students.count} + great students".center(65)
+    puts "Overall, we have " + ("#{students.count}").center(12) + "great students".center(35)
   else
-    puts "Overall, we have " "#{students.count} + great student".center(65)
+    puts "Overall, we have " + ("#{students.count}").center(12) + "great student".center(35)
   end
 end
 
